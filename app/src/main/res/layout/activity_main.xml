@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the document ID"
+        android:id="@+id/documentId"
+        android:inputType="text"
+        android:maxLength="100"
+        android:maxLines="1"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:nextFocusDown="@id/dpartmentName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the dpartment name"
+        android:id="@+id/dpartmentName"
+        android:maxLength="100"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/documentId"
+        android:nextFocusDown="@id/smesterNumber"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the smester number"
+        android:inputType="text"
+        android:id="@+id/smesterNumber"
+        android:maxLength="100"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/dpartmentName"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addValues"
+        android:text="Add Values"
+        android:onClick="addValues"
+        android:layout_below="@id/smesterNumber"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delspecificdoc"
+        android:text="Delete specific record"
+        android:onClick="delDocument"
+        android:layout_below="@id/addValues"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delAll"
+        android:text="Delete all records"
+        android:onClick="delCollection"
+        android:layout_below="@id/delspecificdoc"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getAll"
+        android:text="Get all records"
+        android:onClick="getAlldata"
+        android:layout_below="@id/delAll"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/showalldata"
+        android:layout_below="@id/getAll"/>
+</RelativeLayout>
